@@ -19,7 +19,7 @@
 ```python
 class Solution(object):
   def plusone(self,digits):
-    def addsolution(array):
+    
       n = digits.length-1
       while n >=0:
           if digits[n] !=9:
