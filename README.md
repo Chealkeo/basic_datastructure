@@ -17,3 +17,28 @@ if __name__ == '__main__':
     ans = sl.largestRectangleArea(s)
     print(ans)
 ```
+## 包含类方法调用的输入输出python实现
+输入：
+["Trie","insert","search","search","startsWith","insert","search"]
+[[],["apple"],["apple"],["app"],["app"],["app"],["app"]]
+输出：
+[null,null,true,false,true,null,true]
+```python
+if __name__ == '__main__':
+    op1 = input().replace('\"','')
+    op1 = op1[1:len(op1)-1].split(',')
+    op2 = input().replace('\"','').replace('[','').replace(']','')
+    op2 = op2[:len(op2)-1].split(',')
+    
+    if op1[0]=="Trie":
+        trie = Trie()
+        output=[None]
+        for i in range(1,len(op1)):    
+            #反射
+            #opt = getattr(trie,op1[i])(op2[i]) 
+            #字典
+            dic = {'insert':trie.insert,'search':trie.search,'startsWith':trie.startsWith}
+            opt = dic.get(op1[i])(op2[i])
+            output.append(opt)
+        print(output)
+```
