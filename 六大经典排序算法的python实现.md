@@ -25,7 +25,7 @@ def selectsort(nums):
                 if nums[j]<min://循环内总是和最值比较
                     min = nums[j]
                     k = j
-            nums[i],nums[k] = nums[k],nums[j]
+            nums[i],nums[k] = nums[k],nums[i]
 ```
 ## 直接插入排序
 ### 思想
