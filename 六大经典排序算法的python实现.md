@@ -115,7 +115,8 @@ class Solution:
     #def findKthLargest(self, nums: List[int], k: int) -> int:       
         left = 0
         right = len(nums)-1
-        while True:
+        if left<right:
+        #while True:
             index = self.partion(left,right,nums)
             '''一下是找第k大的数字
             if index==len(nums)-k:
