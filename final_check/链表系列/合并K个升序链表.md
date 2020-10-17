@@ -28,6 +28,7 @@ class Solution:
         def merge(left,right):
             prehead = ListNode(-1)
             cur = prehead
+            #每个子列表的元素是链表的头结点
             while left and right:
                 if left.val<=right.val:
                     cur.next = left
