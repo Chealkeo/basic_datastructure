@@ -40,4 +40,16 @@ class Solution:
         return dummy.next
 ```
 
+```python
+#返回链表中倒数第k个结点
+class Solution:
+    def getKthFromEnd(self, head: ListNode, k: int) -> ListNode:
+        former,latter = head,head
+        for i in range(k):
+            former = former.next
+        while former:
+            former, latter = former.next,latter.next
+        return latter
+```
+
 
